@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="page-header">
+      <h1 align='Center'>PPI SIG File Comparison New and Old </h1>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-10 col-md-offset-1">
+          <!-- BioGrid  -->
+          <div class="panel panel-group" style="padding: 1cm 1cm 1cm 1cm">
+            <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading text-center"><strong>BioGrid</strong></div>
+
+              <!-- Table -->
+              <div class="table-responsive">
+              <table class="table table-bordered" style="text-align: center;">
+                <thead>
+                  <tr>
+                    <th style="vertical-align:middle;">DATASET</th>
+                    <th style="vertical-align:middle;">Number of Interactions</th>
+                    <th style="vertical-align:middle;">Number of Unique Interactions</th>
+                    <th style="vertical-align:middle;">Recovered</th>
+                    <th style="vertical-align:middle;">Not Recovered</th>
+                    <th style="vertical-align:middle;">Not Recovered-From Bad Papers<sup>a</sup></th>
+                    <th style="vertical-align:middle;">Not Recovered-From Good Papers<sup>b</sup></th>
+                    <th style="vertical-align:middle;">Not Recovered %<sup>c</sup></th>
+                    <th style="vertical-align:middle;">New Interactions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>BioGrid_New</td>
+                    <td>35735</td>
+                    <td>35735</td>
+                    <td rowspan="2" style="vertical-align:middle;">23481</td>
+                    <td rowspan="2" style="vertical-align:middle;">71925</td>
+                    <td rowspan="2" style="vertical-align:middle;">66897</td>
+                    <td rowspan="2" style="vertical-align:middle;">5028</td>
+                    <td class="success" rowspan="2" style="vertical-align:middle;">5%</td>
+                    <td class="bg-info" rowspan="2" style="vertical-align:middle;">12254</td>
+                  </tr>
+                  </tr>
+                  <tr>
+                    <td>BioGrid_Old</td>
+                    <td>111718</td>
+                    <td>95406</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+                <div class="panel-body">
+                <p>
+                  <sup>a</sup>Bad Papers are defined as papers that report more than 10 PPIs</br>
+                  <sup>b</sup>Good Papers are defined as papers that 10 PPIs or less</br>
+                  <sup>c</sup>Taken as percent of "Good Papers" over Unique Interactions</br>
+                </p>
+              </div>
+            </div>
+
+            <div class="panel panel-default" >
+              <div class="panel-heading text-center">Visualize relative size of Recovered/New/Lost</div>
+              <!-- <div class="progress" style="padding-right: 20px; padding-left: 20px"> -->
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" aria-valuenow="23481" aria-valuemin="0" aria-valuemax="40763" style="width: 58%">
+                  Recovered: 23481
+                </div>
+                <div class="progress-bar" aria-valuenow="12254" aria-valuemin="0" aria-valuemax="40763" style="width: 30%">
+                  New: 12254
+                </div>
+                <div class="progress-bar progress-bar-danger" aria-valuenow="5028" aria-valuemin="0" aria-valuemax="40763" style="width: 12%">
+                  Lost: 5028
+                </div>
+
+              </div>
+            </div>
+
+            <div class="panel panel-default" >
+              <div class="panel-heading text-center">Visualize Old Database: Recovered/Not Recovered-From Bad Papers/Not Recovered-From Good Papers</div>
+              <!-- <div class="progress" style="padding-right: 20px; padding-left: 20px"> -->
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" aria-valuenow="23481" aria-valuemin="0" aria-valuemax="95406" style="width: 25%">
+                  Recovered: 23481
+                </div>
+                <div class="progress-bar progress-bar-warning" aria-valuenow="66897" aria-valuemin="0" aria-valuemax="95406" style="width: 70%">
+                  Not Recovered-From Bad Papers: 66897
+                </div>
+                <div class="progress-bar progress-bar-danger" aria-valuenow="5028" aria-valuemin="0" aria-valuemax="95406" style="width: 5%">
+                  Not Recovered-From Good Papers: 5028
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+            <!-- MINT  -->
+            <div class="panel panel-group" style="padding: 1cm 1cm 1cm 1cm">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading text-center"><strong>MINT</strong></div>
+                <!-- Table -->
+                <div class="table-responsive">
+                <table class="table table-bordered" style="text-align: center;">
+                  <thead>
+                    <tr>
+                      <th style="vertical-align:middle;">DATASET</th>
+                      <th style="vertical-align:middle;">Number of Interactions</th>
+                      <th style="vertical-align:middle;">Number of Unique Interactions</th>
+                      <th style="vertical-align:middle;">Recovered</th>
+                      <th style="vertical-align:middle;">Not Recovered</th>
+                      <th style="vertical-align:middle;">Not Recovered-From Bad Papers<sup>a</sup></th>
+                      <th style="vertical-align:middle;">Not Recovered-From Good Papers<sup>b</sup></th>
+                      <th style="vertical-align:middle;">Not Recovered %<sup>c</sup></th>
+                      <th style="vertical-align:middle;">New Interactions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>BioGrid_New</td>
+                      <td>5044</td>
+                      <td>5044</td>
+                      <td rowspan="2" style="vertical-align:middle;">4897</td>
+                      <td rowspan="2" style="vertical-align:middle;">26176</td>
+                      <td rowspan="2" style="vertical-align:middle;">23142</td>
+                      <td rowspan="2" style="vertical-align:middle;">3034</td>
+                      <td class="success" rowspan="2" style="vertical-align:middle;">9%</td>
+                      <td class="bg-info" rowspan="2" style="vertical-align:middle;">147</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                      <td>BioGrid_Old</td>
+                      <td>32629</td>
+                      <td>31073</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          <div class="panel-body">
+                  <p>
+                    <sup>a</sup>Bad Papers are defined as papers that report more than 10 PPIs</br>
+                    <sup>b</sup>Good Papers are defined as papers that 10 PPIs or less</br>
+                    <sup>c</sup>Taken as percent of "Good Papers" over Unique Interactions</br>
+                  </p>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">Visualize relative size of Recovered/New/Lost</div>
+                <!-- <div class="progress" style="padding-right: 20px; padding-left: 20px"> -->
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" aria-valuenow="4897" aria-valuemin="0" aria-valuemax="8078" style="width: 61%">
+                    Recovered: 4897
+                  </div>
+                  <div class="progress-bar" aria-valuenow="147" aria-valuemin="0" aria-valuemax="8078" style="width: 2%">
+                    New: 147
+                  </div>
+                  <div class="progress-bar progress-bar-danger" aria-valuenow="3034" aria-valuemin="0" aria-valuemax="8078" style="width: 37%">
+                    Lost: 3034
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default" >
+                <div class="panel-heading text-center">Visualize Old Database: Recovered/Not Recovered-From Bad Papers/Not Recovered-From Good Papers</div>
+                <!-- <div class="progress" style="padding-right: 20px; padding-left: 20px"> -->
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" aria-valuenow="4897" aria-valuemin="0" aria-valuemax="31073" style="width: 15%">
+                    Recovered: 4897
+                  </div>
+                  <div class="progress-bar progress-bar-warning" aria-valuenow="23142" aria-valuemin="0" aria-valuemax="31073" style="width: 74%">
+                    Not Recovered-From Bad Papers: 23142
+                  </div>
+                  <div class="progress-bar progress-bar-danger" aria-valuenow="3034" aria-valuemin="0" aria-valuemax="31073" style="width: 10%">
+                    Not Recovered-From Good Papers: 3034
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          <!-- DIP  -->
+          <div class="panel panel-group" style="padding: 1cm 1cm 1cm 1cm">
+            <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading text-center"><strong>DIP</strong></div>
+
+              <!-- Table -->
+              <div class="table-responsive">
+              <table class="table table-bordered" style="text-align: center;">
+                <thead>
+                  <tr>
+                    <th style="vertical-align:middle;">DATASET</th>
+                    <th style="vertical-align:middle;">Number of Interactions</th>
+                    <th style="vertical-align:middle;">Number of Unique Interactions</th>
+                    <th style="vertical-align:middle;">Recovered</th>
+                    <th style="vertical-align:middle;">Not Recovered</th>
+                    <th style="vertical-align:middle;">Not Recovered-From Bad Papers<sup>a</sup></th>
+                    <th style="vertical-align:middle;">Not Recovered-From Good Papers<sup>b</sup></th>
+                    <th style="vertical-align:middle;">Not Recovered %<sup>c</sup></th>
+                    <th style="vertical-align:middle;">New Interactions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>DIP_New</td>
+                    <td>3898</td>
+                    <td>3898</td>
+                    <td rowspan="2" style="vertical-align:middle;">979</td>
+                    <td rowspan="2" style="vertical-align:middle;">13002</td>
+                    <td rowspan="2" style="vertical-align:middle;">11463</td>
+                    <td rowspan="2" style="vertical-align:middle;">1539</td>
+                    <td class="success" rowspan="2" style="vertical-align:middle;">11%</td>
+                    <td class="bg-info" rowspan="2" style="vertical-align:middle;">2919</td>
+                  </tr>
+                  </tr>
+                  <tr>
+                    <td>DIP_Old</td>
+                    <td>14635</td>
+                    <td>13981</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+                <div class="panel-body">
+                <p>
+                  <sup>a</sup>Bad Papers are defined as papers that report more than 10 PPIs</br>
+                  <sup>b</sup>Good Papers are defined as papers that 10 PPIs or less</br>
+                  <sup>c</sup>Taken as percent of "Good Papers" over Unique Interactions</br>
+                </p>
+              </div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading text-center">Visualize relative size of Recovered/New/Lost</div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" aria-valuenow="979" aria-valuemin="0" aria-valuemax="5437" style="width: 18%">
+                  Recovered: 979
+                </div>
+                <div class="progress-bar" aria-valuenow="2919" aria-valuemin="0" aria-valuemax="5437" style="width: 54%">
+                  New: 2919
+                </div>
+                <div class="progress-bar progress-bar-danger" aria-valuenow="1539" aria-valuemin="0" aria-valuemax="5437" style="width: 28%">
+                  Lost: 1539
+                </div>
+              </div>
+          </div>
+
+          <div class="panel panel-default" >
+            <div class="panel-heading text-center">Visualize Old Database: Recovered/Not Recovered-From Bad Papers/Not Recovered-From Good Papers</div>
+            <!-- <div class="progress" style="padding-right: 20px; padding-left: 20px"> -->
+            <div class="progress">
+              <div class="progress-bar progress-bar-success" aria-valuenow="979" aria-valuemin="0" aria-valuemax="13981" style="width: 7%">
+                Recovered: 979
+              </div>
+              <div class="progress-bar progress-bar-warning" aria-valuenow="11463" aria-valuemin="0" aria-valuemax="13981" style="width: 82%">
+                Not Recovered-From Bad Papers: 11463
+              </div>
+              <div class="progress-bar progress-bar-danger" aria-valuenow="1539" aria-valuemin="0" aria-valuemax="13981" style="width: 11%">
+                Not Recovered-From Good Papers: 1539
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+            <!-- SAVI  -->
+            <div class="panel panel-group" style="padding: 1cm 1cm 1cm 1cm">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading text-center"><strong>SAVI</strong></div>
+
+                <!-- Table -->
+                <div class="table-responsive">
+                <table class="table table-bordered" style="text-align: center;">
+                  <thead>
+                    <tr>
+                      <th style="vertical-align:middle;">DATASET</th>
+                      <th style="vertical-align:middle;">Number of Interactions</th>
+                      <th style="vertical-align:middle;">Number of Unique Interactions</th>
+                      <th style="vertical-align:middle;">Recovered</th>
+                      <th style="vertical-align:middle;">Not Recovered</th>
+                      <th style="vertical-align:middle;">Not Recovered-From Bad Papers<sup>a</sup></th>
+                      <th style="vertical-align:middle;">Not Recovered-From Good Papers<sup>b</sup></th>
+                      <th style="vertical-align:middle;">Not Recovered %<sup>c</sup></th>
+                      <th style="vertical-align:middle;">New Interactions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>SAVI_New</td>
+                      <td>1374</td>
+                      <td>1374</td>
+                      <td rowspan="2" style="vertical-align:middle;">1374</td>
+                      <td rowspan="2" style="vertical-align:middle;">48</td>
+                      <td rowspan="2" style="vertical-align:middle;">45</td>
+                      <td rowspan="2" style="vertical-align:middle;">3</td>
+                      <td class="success" rowspan="2" style="vertical-align:middle;"><1%</td>
+                      <td class="bg-info" rowspan="2" style="vertical-align:middle;">0</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                      <td>SAVI_Old</td>
+                      <td>2007</td>
+                      <td>1422</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+                  <div class="panel-body">
+                  <p>
+                    <sup>a</sup>Bad Papers are defined as papers that report more than 10 PPIs</br>
+                    <sup>b</sup>Good Papers are defined as papers that 10 PPIs or less</br>
+                    <sup>c</sup>Taken as percent of "Good Papers" over Unique Interactions</br>
+                  </p>
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">Visualize relative size of Recovered/New/Lost</div>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" aria-valuenow="1374" aria-valuemin="0" aria-valuemax="1377" style="width: 99.7%">
+                  Recovered: 1374
+                </div>
+                <div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="1477" style="width: 0%">
+                  New: 0
+                </div>
+                <div class="progress-bar progress-bar-danger" aria-valuenow="3" aria-valuemin="0" aria-valuemax="1377" style="width: 0.30%">
+                  Lost: 3
+                </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default" >
+              <div class="panel-heading text-center">Visualize Old Database: Recovered/Not Recovered-From Bad Papers/Not Recovered-From Good Papers</div>
+              <!-- <div class="progress" style="padding-right: 20px; padding-left: 20px"> -->
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" aria-valuenow="1374" aria-valuemin="0" aria-valuemax="1422" style="width: 97%">
+                  Recovered: 1374
+                </div>
+                <div class="progress-bar progress-bar-warning" aria-valuenow="45" aria-valuemin="0" aria-valuemax="1422" style="width: 3%">
+                  Not Recovered-From Bad Papers: 45
+                </div>
+                <div class="progress-bar progress-bar-danger" aria-valuenow="3" aria-valuemin="0" aria-valuemax="1422" style="width: 0%">
+                  Not Recovered-From Good Papers: 3
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+            <!-- InnateDB  -->
+            <div class="panel panel-group" style="padding: 1cm 1cm 1cm 1cm">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading text-center"><strong>InnateDB</strong></div>
+
+                <!-- Table -->
+                <div class="table-responsive">
+                <table class="table table-bordered" style="text-align: center;">
+                  <thead>
+                    <tr>
+                      <th style="vertical-align:middle;">DATASET</th>
+                      <th style="vertical-align:middle;">Number of Interactions</th>
+                      <th style="vertical-align:middle;">Number of Unique Interactions</th>
+                      <th style="vertical-align:middle;">Recovered</th>
+                      <th style="vertical-align:middle;">Not Recovered</th>
+                      <th style="vertical-align:middle;">Not Recovered-From Bad Papers<sup>a</sup></th>
+                      <th style="vertical-align:middle;">Not Recovered-From Good Papers<sup>b</sup></th>
+                      <th style="vertical-align:middle;">Not Recovered %<sup>c</sup></th>
+                      <th style="vertical-align:middle;">New Interactions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>InnateDB_New</td>
+                      <td>5023</td>
+                      <td>5023</td>
+                      <td rowspan="2" style="vertical-align:middle;">4868</td>
+                      <td rowspan="2" style="vertical-align:middle;">12184</td>
+                      <td rowspan="2" style="vertical-align:middle;">8630</td>
+                      <td rowspan="2" style="vertical-align:middle;">3554</td>
+                      <td class="warning" rowspan="2" style="vertical-align:middle;">20%</td>
+                      <td class="bg-info" rowspan="2" style="vertical-align:middle;">155</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                      <td>InnateDB_Old</td>
+                      <td>20388</td>
+                      <td>17052</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+                  <div class="panel-body">
+                  <p>
+                    <sup>a</sup>Bad Papers are defined as papers that report more than 10 PPIs</br>
+                    <sup>b</sup>Good Papers are defined as papers that 10 PPIs or less</br>
+                    <sup>c</sup>Taken as percent of "Good Papers" over Unique Interactions</br>
+                  </p>
+                </div>
+              </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading text-center">Visualize relative size of Recovered/New/Lost</div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" aria-valuenow="4868" aria-valuemin="0" aria-valuemax="8577" style="width: 56.8%">
+                    Recovered: 4868
+                  </div>
+                  <div class="progress-bar" aria-valuenow="155" aria-valuemin="0" aria-valuemax="8577" style="width: 1.8%">
+                    New: 155
+                  </div>
+                  <div class="progress-bar progress-bar-danger" aria-valuenow="3554" aria-valuemin="0" aria-valuemax="8577" style="width: 41.4%">
+                    Lost: 3554
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel panel-default" >
+                <div class="panel-heading text-center">Visualize Old Database: Recovered/Not Recovered-From Bad Papers/Not Recovered-From Good Papers</div>
+                <!-- <div class="progress" style="padding-right: 20px; padding-left: 20px"> -->
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" aria-valuenow="4868" aria-valuemin="0" aria-valuemax="17052" style="width: 29%">
+                    Recovered: 4868
+                  </div>
+                  <div class="progress-bar progress-bar-warning" aria-valuenow="8630" aria-valuemin="0" aria-valuemax="17052" style="width: 50%">
+                    Not Recovered-From Bad Papers: 8630
+                  </div>
+                  <div class="progress-bar progress-bar-danger" aria-valuenow="3554" aria-valuemin="0" aria-valuemax="17052" style="width: 21%">
+                    Not Recovered-From Good Papers: 3554
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- IntAct  -->
+            <div class="panel panel-group" style="padding: 1cm 1cm 1cm 1cm">
+              <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading text-center"><strong>IntAct</strong></div>
+
+                <!-- Table -->
+                <div class="table-responsive">
+                <table class="table table-bordered" style="text-align: center;">
+                  <thead>
+                    <tr>
+                      <th style="vertical-align:middle;">DATASET</th>
+                      <th style="vertical-align:middle;">Number of Interactions</th>
+                      <th style="vertical-align:middle;">Number of Unique Interactions</th>
+                      <th style="vertical-align:middle;">Recovered</th>
+                      <th style="vertical-align:middle;">Not Recovered</th>
+                      <th style="vertical-align:middle;">Not Recovered-From Bad Papers<sup>a</sup></th>
+                      <th style="vertical-align:middle;">Not Recovered-From Good Papers<sup>b</sup></th>
+                      <th style="vertical-align:middle;">Not Recovered %<sup>c</sup></th>
+                      <th style="vertical-align:middle;">New Interactions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>IntAct_New</td>
+                      <td>10890</td>
+                      <td>10890</td>
+                      <td rowspan="2" style="vertical-align:middle;">2997</td>
+                      <td rowspan="2" style="vertical-align:middle;">3414</td>
+                      <td rowspan="2" style="vertical-align:middle;">0</td>
+                      <td rowspan="2" style="vertical-align:middle;">3414</td>
+                      <td class="danger" rowspan="2" style="vertical-align:middle;">53%</td>
+                      <td class="bg-info" rowspan="2" style="vertical-align:middle;">7893</td>
+                    </tr>
+                    </tr>
+                    <tr>
+                      <td>IntAct_Old</td>
+                      <td>8146</td>
+                      <td>6411</td>
+
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+                  <div class="panel-body">
+                  <p>
+                    <sup>a</sup>Bad Papers are defined as papers that report more than 10 PPIs</br>
+                    <sup>b</sup>Good Papers are defined as papers that 10 PPIs or less</br>
+                    <sup>c</sup>Taken as percent of "Good Papers" over Unique Interactions</br>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="panel panel-default">
+                <div class="panel-heading text-center">Visualize relative size of Recovered/New/Lost</div>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-success" aria-valuenow="2997" aria-valuemin="0" aria-valuemax="14304" style="width: 21%">
+                    Recovered: 2997
+                  </div>
+                  <div class="progress-bar" aria-valuenow="7893" aria-valuemin="0" aria-valuemax="14304" style="width: 55%">
+                    New: 7893
+                  </div>
+                  <div class="progress-bar progress-bar-danger" aria-valuenow="3414" aria-valuemin="0" aria-valuemax="14304" style="width: 24%">
+                    Lost: 3414
+                  </div>
+              </div>
+            </div>
+
+            <div class="panel panel-default" >
+              <div class="panel-heading text-center">Visualize Old Database: Recovered/Not Recovered-From Bad Papers/Not Recovered-From Good Papers</div>
+              <!-- <div class="progress" style="padding-right: 20px; padding-left: 20px"> -->
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" aria-valuenow="2997" aria-valuemin="0" aria-valuemax="6411" style="width: 47%">
+                  Recovered: 2997
+                </div>
+                <div class="progress-bar progress-bar-warning" aria-valuenow="0" aria-valuemin="0" aria-valuemax="6411" style="width: 0%">
+                  Not Recovered-From Bad Papers: 0
+                </div>
+                <div class="progress-bar progress-bar-danger" aria-valuenow="3414" aria-valuemin="0" aria-valuemax="6411" style="width: 53%">
+                  Not Recovered-From Good Papers: 3414
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
